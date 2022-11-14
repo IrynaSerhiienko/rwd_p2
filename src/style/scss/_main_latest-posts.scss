@@ -1,0 +1,14 @@
+.title-holder {
+  &.features {
+    @include size-m-w(539px, auto);
+    @include font-setting("Montserrat", normal, 700, 36px, 44px, $dark);
+    margin: 0 auto;
+    margin-bottom: 50px;
+    text-align: center;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

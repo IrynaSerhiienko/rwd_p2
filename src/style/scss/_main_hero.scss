@@ -1,0 +1,100 @@
+/* .hero {
+  display: flex;
+  flex-wrap: wrap;
+} */
+.hero-holder {
+  @include size-m-w(320px, 500px);
+  margin-bottom: 70px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    @include size-m-w(768px, 320px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1440px) {
+    @include size-m-w(1440px, 600px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .pseudo-title-holder {
+    //@include size-m-w(320px, 500px);
+    @include size-m-w(100%, 500px);
+    background-image: url("../../img/hero-bg-mb.jpg");
+    background-repeat: repeat;
+    background-color: transparent;
+    background-size: cover;
+    padding-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 768px) {
+      @include size-m-w(768px, 320px);
+      background-image: url("../../img/hero-bg-lt.jpg");
+      
+      padding-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 1440px) {
+      @include size-m-w(1440px, 600px);
+      background-image: url("../../img/hero-bg-dt.jpg");
+      padding-top: 100px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .pseudo-title {
+      @include font-setting(
+        "Red Hat Display",
+        normal,
+        600,
+        30px,
+        50px,
+        0.05em,
+        $black
+      );
+      @include size-m-w(300px, 200px);
+      margin: 0 10px;
+      display: flex;
+      flex-wrap: wrap;
+
+      @media screen and (min-width: 768px) {
+        @include size-m-w(700px, 100px);
+        @include font-setting(
+          "Red Hat Display",
+          normal,
+          600,
+          36px,
+          50px,
+          0.05em,
+          $black
+        );
+        margin: 0 34px 190px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      @media screen and (min-width: 1440px) {
+        @include size-m-w(770px, 120px);
+        @include font-setting(
+          "Red Hat Display",
+          normal,
+          600,
+          48px,
+          64px,
+          0.05em,
+          $black
+        );
+        margin: 0 535px 380px 135px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

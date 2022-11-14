@@ -1,0 +1,299 @@
+.header {
+  position: relative;
+
+  &.active {
+    .nav-list {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .burger-btn {
+      span {
+        opacity: 0;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        top: 8px;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        bottom: 12px;
+      }
+    }
+  }
+  .container {
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    @media screen and (min-width: 768px) {
+      margin: 23px 34px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    @media screen and (min-width: 1024px) {
+      margin: 23px 100px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    @media screen and (min-width: 1440px) {
+      margin: 44px 135px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+
+.logo-holder {
+  margin-right: 81px;
+
+  @media screen and (min-width: 425px) {
+    margin-right: 110px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 320px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-right: 130px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-right: 320px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.logo-link {
+}
+.nav-holder {
+}
+.nav {
+  @media screen and (min-width: 1024px) {
+    margin-right: 70px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.nav-list {
+  background-color: $white;
+  padding: 15px 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.3s;
+
+  @media screen and (min-width: 1024px) {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    gap: 42px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.nav-item {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.nav-link {
+}
+.serch {
+}
+
+.search-burger-holder {
+  display: flex;
+}
+
+.input-holder {
+  @include size-m-w(1px, 1px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.3s;
+}
+
+.search-btn {
+  @include size(20px, 20px);
+  margin-right: 20px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.icon-search {
+  background-color: $white;
+  font-size: 20px;
+}
+
+.search-burger-holder {
+}
+
+.burger-btn {
+  position: relative;
+  @include size(34px, 24px);
+  background-color: transparent;
+
+  @media screen and (min-width: 1024px) {
+    opacity: 0;
+    visibility: hidden;
+    //display: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  span,
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border: 2px solid $black;
+    background-color: black;
+    transition: all ease-in-out 0.3s;
+  }
+
+  span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+/* .header {
+  @extend %flex;
+  @include size-m-w(1440px, 80px);
+  margin-bottom: 70px;
+}
+
+.nav {
+  @extend %flex;
+  @include size-m-w(1240px, 46px);
+  margin: 17px 120px;
+  width: 100%;
+}
+
+.ul {
+  @extend %flex;
+  align-items: center;
+
+  li {
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.logo-holder {
+  margin-right: 198px;
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.link-holder {
+  margin-right: 20px;
+  transition: transform 0.5s;
+
+  &:hover {
+    color: $blue;
+    text-shadow: 2px 2px 4px $light-grey;
+    transform: scale(1.2);
+  }
+
+  a {
+    @include font-setting("Montserrat", normal, 400, 16px, 28px, $dark);
+  }
+
+  &.first {
+    color: $orange;
+
+    &:hover {
+      text-shadow: 2px 2px 4px $beige;
+    }
+  }
+
+  &.last {
+    margin-right: 200px;
+  }
+}
+
+.btn-holder {
+  @include size(110px, 46px);
+  padding: 13px 22px;
+  border: 1px solid $gray;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.5s;
+
+  &:hover {
+    border: none;
+    box-shadow: 0 0 0 1px $orange, 0 0 10px $shadow;
+    transform: scale(1.2);
+  }
+
+  &.sign-in {
+    background-color: $white;
+    margin-right: 32px;
+  }
+
+  &.sign-up {
+    background-color: $orange;
+    border-color: $orange;
+  }
+
+  a {
+    @include font-setting("Montserrat", normal, 600, 16px, 20px, $dark);
+  }
+}
+ */

@@ -1,0 +1,41 @@
+/* .section {
+  @extend %flex;
+  @include size-m-w(1200px, auto);
+  margin-bottom: 100px;
+  margin: 0 auto;
+}
+.row-holder {
+  @extend %flex;
+  @include size-m-w(1200px, auto);
+  flex-direction: row;
+  gap: 56px;
+}*/
+.main {
+  @include size-m-w(1440px, auto);
+  //background-color: $bg-main;
+  //padding: 55px 30px 55px 135px;
+}
+
+.blog {
+  @extend %flex;
+
+  @media screen and (min-width: 425px) {
+    padding: 0 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0 34px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 0 100px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 0 135px;
+  }
+
+  /* @include size-m-w(1440px, auto);
+   
+  } */
+}

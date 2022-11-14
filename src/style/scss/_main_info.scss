@@ -1,0 +1,72 @@
+.row-holder {
+    &.benifits {
+      margin-bottom: 100px;
+    }
+  }
+  .column-holder {
+    &.benifits {
+      @extend %flex;
+      @include size-m-w(500px, 301px);
+      margin: 97px 0;
+  
+      .title-holder {
+        @include size-m-w(500px, auto);
+        @include font-setting("Montserrat", normal, 700, 44px, 54px, $dark);
+        margin-bottom: 30px;
+        transition: transform 0.5s;
+  
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+  
+      .text-holder {
+        @include size-m-w(500px, auto);
+        @include font-setting("Montserrat", normal, 400, 18px, 28px, $gray-p);
+        margin-bottom: 20px;
+        transition: transform 0.5s;
+  
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+  
+      .btn-holder {
+        @include size(180px, 50px);
+        padding: 13px 40px;
+        border: 1px solid $orange;
+        background-color: $orange;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.5s;
+  
+        &:hover {
+          border: none;
+          box-shadow: 0 0 0 1px $orange, 0 0 10px $shadow;
+          transform: scale(1.2);
+        }
+  
+        a {
+          color: $white;
+          @include font-setting("Poppins", normal, 700, 16px, 24px, $white);
+        }
+      }
+    }
+  }
+  
+  .img-holder {
+    &.first-screen {
+      @include size-m-w(644px, auto);
+      transition: transform 0.5s;
+  
+      &:hover {
+        transform: scale(1.2);
+      }
+  
+      img {
+        width: 100%;
+      }
+    }
+  }
+  
